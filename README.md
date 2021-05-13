@@ -34,6 +34,15 @@ Successfully Extracted sample.txt in new file: sample_extracted.txt
 ```
 sample.txt:
 ```
+John lives in California. 
+His email is johndoe@gmail.com and his number is 592-483-4942. 
+John loves to go swimming! 
+Peter lives in New York. 
+His email is peter@outlook.com and his number is 394-548-4392. 
+Peter loves to go fishing!
+```
+sample_extracted.txt:
+```
 Sentence #1: John lives in California.
   Sentiment: Neutral
   Entities:
