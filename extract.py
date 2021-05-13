@@ -84,8 +84,8 @@ def extract(txt):
                 kbp_triples.append({'subject': kbp.subject, 'relation': kbp.relation, 'object': kbp.object})
 
     # Writes extract to new file with "_extracted" suffix
-    path = Path(str(path.parent) + "/" + str(path.stem) + "_extracted.txt")
-    f = open(path, "w+")
+    new_path = Path(str(path.parent) + "/" + str(path.stem) + "_extracted.txt")
+    f = open(new_path, "w+")
     f.seek(0)
     for i, sentence in enumerate(sentences):
         f.write(f'Sentence #{i}: {sentence["text"]}\n')
@@ -108,7 +108,7 @@ def extract(txt):
     f.truncate()
     f.close()
 
-    print(f'\nSuccessfully Extracted {txt} in new file: {path}')
+    print(f'\nSuccessfully Extracted {path.name} in new file: {new_path.name}')
 
 # Runs Main function
 if __name__ == '__main__':
