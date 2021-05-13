@@ -34,7 +34,6 @@ Successfully Extracted sample.txt in new file: sample_extracted.txt
 ```
 sample.txt:
 ```
-  
 Sentence #1: John lives in California.
   Sentiment: Neutral
   Entities:
