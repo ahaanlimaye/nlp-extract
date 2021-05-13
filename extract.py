@@ -88,23 +88,23 @@ def extract(txt):
     f = open(new_path, "w+")
     f.seek(0)
     for i, sentence in enumerate(sentences):
-        f.write(f'Sentence #{i}: {sentence["text"]}\n')
-        f.write(f'\tSentiment: {sentence["sentiment"]}\n')
-        f.write('\tEntities:\n')
+        f.write(f'Sentence #{i+1}: {sentence["text"]}\n')
+        f.write(f'  Sentiment: {sentence["sentiment"]}\n')
+        f.write('  Entities:\n')
         for e in sentence["entities"]:
-            f.write(f'\t\t- entity: {e["entity"]} ({e["text"]})\n')
+            f.write(f'    - {e["entity"]} ({e["text"]})\n')
         f.write('\n')
     f.write('Emails\n')
     for email in emails:
-        f.write(f'\t- {email}\n')
+        f.write(f'  - {email}\n')
     f.write('\n')
     f.write('Phone Numbers\n')
     for phone_number in phone_numbers:
-        f.write(f'\t- {phone_number}\n')
+        f.write(f'  - {phone_number}\n')
     f.write('\n')
     f.write('KBP Relations\n')
     for kbp in kbp_triples:
-        f.write(f'\t- Object: {kbp["object"]}, Relation: {kbp["relation"]}, Subject: {kbp["subject"]}\n')
+        f.write(f'  - Subject: {kbp["subject"]}, Relation: {kbp["relation"]}, Object: {kbp["object"]}\n')
     f.truncate()
     f.close()
 
